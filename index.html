@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
     <!-- Font import -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
     <title>Spotify</title>
@@ -18,10 +20,11 @@
     <div class="container clearfix">
         <!-- SIDE BAR -->
         <header id="side_bar" class="flex_container float_left">
-            <div class="main_side_bar">
+            
+            
                 <!-- LOGO -->
                 <img id="logo" src="img/logo.svg" alt="Spotify Logo">
-                <!-- NAVIGATION BLOCK -->
+                <!-- NAVIGATION BAR -->
                 <ul class="navigation_bar">
                     <li>
                         <a href="#">
@@ -44,14 +47,14 @@
                 </ul>
                 <!-- PLAYLIST -->
                 <div class="playlist">
-                    <h3>Playlist</h3>
+                    <h4>PLAYLIST</h4>
+                    
+                    <a class="create_playlist" href="#">
+                        <i class="icon fas fa-plus-square"></i>
+                        Crea Playlist
+                    </a>
+                    
                     <ul class="playlist_list">
-                        <li class="create_playlist"> 
-                            <a href="#">
-                                <i class="icon fas fa-plus-square"></i>
-                                Crea Playlist
-                            </a>
-                        </li>
                         <li><a href="#">Nome Playlist</a></li>
                         <li><a href="#">Nome Playlist</a></li>
                         <li><a href="#">Nome Playlist</a></li>
@@ -59,14 +62,15 @@
                         <li><a href="#">Nome Playlist</a></li>
                     </ul>
                 </div>
-            </div>
-
+            
+                <!-- SMALL SIDE BAR -->
             <ul class="small_side_bar">
                 <li>
                     <a href="#">
                         <i class="icon far fa-arrow-alt-circle-down"></i>
                         Installa app
                     </a>
+                   
                 </li>
                 <li>
                     <div class="line"></div>
@@ -79,16 +83,14 @@
                 </li>
             </ul>
         </header>
-    
 
-
-
+        <!-- TOP BAR -->
         <div id="top_bar">
-            <!-- HEADER BUTTON -->
+            <!-- TOP BAR BUTTON -->
             <button class="top_bar_button">EFFETTUA L'UPGRADE</button>
         </div>
-       
-      
+
+   
     </div>
 </body>
 </html>

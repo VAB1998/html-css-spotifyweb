@@ -5,8 +5,10 @@
     padding: 0;
 }
 
-
-
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/* ------Repeated Parts of Code------ */
 /* BUTTONS */
 /* Often repeated settings */
 button{
@@ -41,26 +43,39 @@ a{
 .line{
     border-bottom: 1px solid gray;
 }
+/* ------------------- */
 
 
 
-/* SIDE BAR- MAIN SIDE BAR */
-div.main_side_bar li{
+/* SIDE BAR- NAVIGATION BAR>LI */
+.navigation_bar li{
     padding: 10px 0 10px 10px;
 } 
+
+/* SIDE BAR- PLAYLIST */
+div.playlist{
+    padding-left: 10px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+/* SIDE BAR- PLAYLIST LIST */
+ul.playlist_list li{
+    padding: 6px 0;
+}
+
+/* SIDE BAR- PLAYLIST> H4 */
+div.playlist>h4{
+    color: white;  
+    margin: 6px 0;  
+}
 
 /* SIDE BAR- SMALL SIDE BAR */
 ul.small_side_bar li{
     padding: 5px 10px;
 }
 
-/* SIDE BAR- SMALL SIDE BAR> ICON */
-ul.small_side_bar .icon{
-    vertical-align: middle;
-    padding-right: 5px;
-}
-
-/* HEADER- HEADER BUTTON */
+/* TOP BAR- TOP BAR BUTTON */
 button.top_bar_button{
     /* Style Settings */
     color: white;
@@ -74,15 +89,21 @@ button.top_bar_button{
 /* SIDE BAR- NAVIGATION> ICON */
 ul.navigation_bar .icon{
     /* Style Settings */
-    font-size: 1.8em;
+    font-size: 1.6em;
     vertical-align: middle;
     padding-right: 5px;
 }
 
 /* SIDE BAR- PLAYLIST> ICON */
-li.create_playlist .icon{
+a.create_playlist .icon{
     /* Style Settings */
     font-size: 2.5em;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+/* SIDE BAR- SMALL SIDE BAR> ICON */
+ul.small_side_bar .icon{
     vertical-align: middle;
     padding-right: 5px;
 }
@@ -104,6 +125,7 @@ li.create_playlist .icon{
     margin: 15px;
 }
 
+/* TOP BAR */
 #top_bar{
     /* Style Settings */
     background-color: #393939;
@@ -111,3 +133,16 @@ li.create_playlist .icon{
     /* Position Settings */
     text-align: right;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
