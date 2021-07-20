@@ -5,9 +5,9 @@
     padding: 0;
 }
 
-header{
+#top_bar{
     /* Style Settings */
-    
+
     background-color: #393939;
     padding: 20px 0;
     /* Position Settings */
@@ -41,7 +41,7 @@ button{
 
 
 /* HEADER- HEADER BUTTON */
-#header_button{
+button.top_bar_button{
     /* Style Settings */
     color: white;
     background-color: #393939;
@@ -52,29 +52,18 @@ button{
 }
 
 
-button.side_button{
-    /* Style Settings */
-    height: 45px;
-    width: 100%;
-    padding-left: 10px;
-    color: grey;
-    /* Other Settings */
-    text-align: left;
 
-    /* Remove Later */
-    border: 1px solid green;
-}
-
-/* SIDE BAR- NAVIGATION BAR BUTTON */
-button.navigation_bar_button>span.icon{
+/* !!!!!!!!!!!!!!!!!!!!!!!!1 */
+/* SIDE BAR- NAVIGATION> ICON */
+.navigation_bar .icon{
     /* Style Settings */
     font-size: 1.8em;
     vertical-align: middle;
     padding-right: 5px;
 }
 
-/* SIDE BAR- PLAYLIST BUTTON */
-button.playlist_button>span.icon{
+/* SIDE BAR- PLAYLIST> ICON */
+.create_playlist .icon{
     /* Style Settings */
     font-size: 2.5em;
     vertical-align: middle;
@@ -87,7 +76,7 @@ button.playlist_button>span.icon{
     background-color: black;
     width: 200px;
     height: 90vh;
-    
+
     /* Flex Settings */
     flex-direction: column;
     justify-content: space-between;
@@ -105,15 +94,43 @@ a{
     color: grey;
 }
 
-.playlist_list>li{
-    padding: 15px 0 0 10px;
+
+
+
+
+/* SIDE BAR- SMALL SIDE BAR> ICON */
+.small_side_bar span.icon{
+    vertical-align: middle;
+    padding-right: 5px;
 }
 
 
 
+.navigation_bar>li{
+    /* Style Settings */
+
+    /* width: 100%; */
+    color: grey;
+    background-color: white;
+
+}
+
+.main_side_bar li{
+    padding: 10px 0 10px 10px;
+}
 
 
 
+button.side_button{
+    /* Style Settings */
+    height: 45px;
+    width: 100%;
+    padding-left: 10px;
+    color: grey;
+    /* Other Settings */
+    text-align: left;
 
-
+    /* Remove Later */
+    border: 1px solid green;
+}
 

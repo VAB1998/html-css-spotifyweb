@@ -14,39 +14,44 @@
 
     <title>Spotify</title>
 </head>
-<body>
-    <div class="container">
+<body class="clearfix">
+    <div class="container clearfix">
         <!-- SIDE BAR -->
-        <div id="side_bar" class="flex_container float_left">
+        <header id="side_bar" class="flex_container float_left">
             <div class="main_side_bar">
                 <!-- LOGO -->
                 <img id="logo" src="img/logo.svg" alt="Spotify Logo">
                 <!-- NAVIGATION BLOCK -->
                 <ul class="navigation_bar">
                     <li>
-                        <button class="side_button navigation_bar_button">
-                            <span class="icon"><i class="fas fa-home"></i></span>
-                            <span>Home</span>
-                        </button>
+                        <a href="#">
+                            <i class="icon fas fa-home"></i>
+                            Home
+                        </a>
                     </li>
                     <li>
-                        <button class="side_button navigation_bar_button">
+                        <a href="#">
                             <span class="icon"><i class="fas fa-home"></i></span>
                             <span>Home</span>
-                        </button>
+                        </a>
                     </li>
                     <li>
-                        <button class="side_button navigation_bar_button">
+                        <a href="#">
                             <span class="icon"><i class="fas fa-home"></i></span>
                             <span>Home</span>
-                        </button>
+                        </a>
                     </li>
                 </ul>
                 <!-- PLAYLIST -->
                 <div class="playlist">
                     <h3>Playlist</h3>
-                    <button class="side_button playlist_button"><span class="icon"><i class="fas fa-plus-square"></i></span>Crea Playlist<span></span></button>
                     <ul class="playlist_list">
+                        <li class="create_playlist"> 
+                            <a href="#">
+                                <i class="icon fas fa-plus-square"></i>
+                                Crea Playlist
+                            </a>
+                        </li>
                         <li><a href="#">Nome Playlist</a></li>
                         <li><a href="#">Nome Playlist</a></li>
                         <li><a href="#">Nome Playlist</a></li>
@@ -56,15 +61,29 @@
                 </div>
             </div>
 
-            <div class="small_side_bar">
-                <a href="#"><span class="icon"><i class="far fa-arrow-alt-circle-down"></i></span>Installa app</a>
-            </div>
-        </div>
-    <!-- HEADER -->
-        <header>
-            <!-- HEADER BUTTON -->
-            <button id="header_button">EFFETTUA L'UPGRADE</button>
+            <ul class="small_side_bar">
+                <li>
+                    <a href="#">
+                        <i class="far fa-arrow-alt-circle-down"></i>
+                        Installa app
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user"></i>
+                        John Doe
+                    </a>
+                </li>
+            </ul>
         </header>
+    
+
+
+
+        <div id="top_bar">
+            <!-- HEADER BUTTON -->
+            <button class="top_bar_button">EFFETTUA L'UPGRADE</button>
+        </div>
        
       
     </div>
