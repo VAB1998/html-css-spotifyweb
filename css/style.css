@@ -5,17 +5,9 @@
     padding: 0;
 }
 
-/* CLEARFIX */
-.clearfix::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-
 header{
     /* Style Settings */
+    
     background-color: #393939;
     padding: 20px 0;
     /* Position Settings */
@@ -29,6 +21,25 @@ button{
     cursor: pointer;
 }
 
+/* CLEARFIX */
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Float */
+.float_left{
+    float: left;
+}
+
+/* Flex */
+.flex_container{
+    display: flex;
+}
+
+
+
 /* HEADER- HEADER BUTTON */
 #header_button{
     /* Style Settings */
@@ -39,3 +50,70 @@ button{
     border-radius: 20px;
     border: 1px solid white;
 }
+
+
+button.side_button{
+    /* Style Settings */
+    height: 45px;
+    width: 100%;
+    padding-left: 10px;
+    color: grey;
+    /* Other Settings */
+    text-align: left;
+
+    /* Remove Later */
+    border: 1px solid green;
+}
+
+/* SIDE BAR- NAVIGATION BAR BUTTON */
+button.navigation_bar_button>span.icon{
+    /* Style Settings */
+    font-size: 1.8em;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+/* SIDE BAR- PLAYLIST BUTTON */
+button.playlist_button>span.icon{
+    /* Style Settings */
+    font-size: 2.5em;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+/* SIDE BAR */
+#side_bar{
+    /* Style Settings */
+    background-color: black;
+    width: 200px;
+    height: 90vh;
+    
+    /* Flex Settings */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* SIDE BAR- LOGO */
+#logo{
+    width: 70%;
+    margin: 15px;
+}
+
+/* ANCHOR */
+a{
+    text-decoration: none;
+    color: grey;
+}
+
+.playlist_list>li{
+    padding: 15px 0 0 10px;
+}
+
+
+
+
+
+
+
+
+
