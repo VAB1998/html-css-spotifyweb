@@ -12,3 +12,30 @@
     clear: both;
 }
 
+
+
+header{
+    /* Style Settings */
+    background-color: #393939;
+    padding: 20px 0;
+    /* Position Settings */
+    text-align: right;
+}
+
+/* BUTTONS */
+/* Often repeated settings */
+button{
+    border: none;
+    cursor: pointer;
+}
+
+/* HEADER- HEADER BUTTON */
+#header_button{
+    /* Style Settings */
+    color: white;
+    background-color: #393939;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 20px;
+    border: 1px solid white;
+}
