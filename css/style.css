@@ -5,20 +5,19 @@
     padding: 0;
 }
 
-#top_bar{
-    /* Style Settings */
 
-    background-color: #393939;
-    padding: 20px 0;
-    /* Position Settings */
-    text-align: right;
-}
 
 /* BUTTONS */
 /* Often repeated settings */
 button{
     border: none;
     cursor: pointer;
+}
+
+/* ANCHORS */
+a{
+    text-decoration: none;
+    color: grey;
 }
 
 /* CLEARFIX */
@@ -38,7 +37,28 @@ button{
     display: flex;
 }
 
+/* Line */
+.line{
+    border-bottom: 1px solid gray;
+}
 
+
+
+/* SIDE BAR- MAIN SIDE BAR */
+div.main_side_bar li{
+    padding: 10px 0 10px 10px;
+} 
+
+/* SIDE BAR- SMALL SIDE BAR */
+ul.small_side_bar li{
+    padding: 5px 10px;
+}
+
+/* SIDE BAR- SMALL SIDE BAR> ICON */
+ul.small_side_bar .icon{
+    vertical-align: middle;
+    padding-right: 5px;
+}
 
 /* HEADER- HEADER BUTTON */
 button.top_bar_button{
@@ -51,11 +71,8 @@ button.top_bar_button{
     border: 1px solid white;
 }
 
-
-
-/* !!!!!!!!!!!!!!!!!!!!!!!!1 */
 /* SIDE BAR- NAVIGATION> ICON */
-.navigation_bar .icon{
+ul.navigation_bar .icon{
     /* Style Settings */
     font-size: 1.8em;
     vertical-align: middle;
@@ -63,7 +80,7 @@ button.top_bar_button{
 }
 
 /* SIDE BAR- PLAYLIST> ICON */
-.create_playlist .icon{
+li.create_playlist .icon{
     /* Style Settings */
     font-size: 2.5em;
     vertical-align: middle;
@@ -76,7 +93,6 @@ button.top_bar_button{
     background-color: black;
     width: 200px;
     height: 90vh;
-
     /* Flex Settings */
     flex-direction: column;
     justify-content: space-between;
@@ -88,49 +104,10 @@ button.top_bar_button{
     margin: 15px;
 }
 
-/* ANCHOR */
-a{
-    text-decoration: none;
-    color: grey;
-}
-
-
-
-
-
-/* SIDE BAR- SMALL SIDE BAR> ICON */
-.small_side_bar span.icon{
-    vertical-align: middle;
-    padding-right: 5px;
-}
-
-
-
-.navigation_bar>li{
+#top_bar{
     /* Style Settings */
-
-    /* width: 100%; */
-    color: grey;
-    background-color: white;
-
+    background-color: #393939;
+    padding: 20px 0;
+    /* Position Settings */
+    text-align: right;
 }
-
-.main_side_bar li{
-    padding: 10px 0 10px 10px;
-}
-
-
-
-button.side_button{
-    /* Style Settings */
-    height: 45px;
-    width: 100%;
-    padding-left: 10px;
-    color: grey;
-    /* Other Settings */
-    text-align: left;
-
-    /* Remove Later */
-    border: 1px solid green;
-}
-
