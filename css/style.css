@@ -16,10 +16,6 @@ a{
     display: block;
 }
 
-h2{
-    color: white;
-}
-
 button{
     cursor: pointer;
     border: none;
@@ -70,6 +66,19 @@ button.top_bar_button{
     border: 1px solid white;
 }
 
+/* SONGS LIST- SONG LIST TITLE */
+h2.song_list_title{
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* SONGS LIST- SONG LIST SUBTITLE */
+h3.song_list_subtitle{
+    color: gray;
+    font-size: .8em;
+    margin-bottom: 10px;
+}
+
 /* SONG LIST- SONG CONTAINER  */
 div.song_container{
     /* Box Settings */
@@ -87,6 +96,7 @@ img.song_image{
 /* SONG LIST- SONG TITLE */
 div.song_title{
     /* Style */
+    font-size: .85em;
     font-weight: bold;
     color: white;
     /* Box Settings */
@@ -97,7 +107,7 @@ div.song_title{
 div.song_subtitle{
     /* Style */
     color: grey;
-    font-size: .8em;
+    font-size: .7em;
     /* Box Settings */
     margin-bottom: 8px;
 }
@@ -150,8 +160,8 @@ div.song_subtitle{
     margin: 10px;
 }
 
-/* SONGS LIST */
-#songs_list{
+/* HOMEPAGE */
+#homepage{
     /* Layout Structure */
     width: calc(100% - 180px);
     height: calc(100vh - 160px);
@@ -164,14 +174,18 @@ div.song_subtitle{
 }
 
 /* SONGS LIST- SONGS BAR */
-#songs_bar{
+#homepage_bar{
     /* Flex Settings */
     justify-content: center;
     flex-wrap: wrap;
 }
 
 /* SONGS LIST- RECENTLY PLAYED SONGS */
-#recently_played_songs{
+/* #recently_played_songs{
+    margin-bottom: 40px;
+} */
+/* HOMEPAGE- SONGS LIST */
+div.songs_list{
     margin-bottom: 40px;
 }
 
@@ -192,6 +206,13 @@ div.song_subtitle{
     margin-left: 10px;
 }
 
+/* SONGS LIST- SONGS BAR> A */
+#homepage_bar a{
+    /* Box Settings */
+    padding: 10px 0;
+    margin: 10px;
+}
+
 /* SIDE BAR- NAVIGATION BAR> ICONS */
 #navigation_bar .icon{
     /* Box Settings */
@@ -208,11 +229,12 @@ div.song_subtitle{
     vertical-align: middle;
 }
 
-/* SONGS LIST- SONGS BAR> A */
-#songs_bar a{
-    /* Box Settings */
-    padding: 10px 0;
-    margin: 10px;
+
+/* ---------------------- */
+/* HOMEPAGE- POPULAR ARTISTS> SONG IMAGE */
+#popular_artists .song_image{
+    /* Box Style */
+    border-radius: 50%;
 }
 
 
@@ -222,7 +244,11 @@ div.song_subtitle{
 /* Media Queries */
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 992px) {  
-    #recently_played_songs{
+    /* #recently_played_songs{
+        flex-wrap: wrap;
+    } */
+    /* HOMEPAGE- SONGS LIST */
+    div.songs_list{
         flex-wrap: wrap;
     }
 
@@ -237,10 +263,13 @@ div.song_subtitle{
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 768px) {
 
-    #recently_played_songs{
+    /* #recently_played_songs{
+        flex-wrap: wrap;
+    } */
+    /* HOMEPAGE- SONGS LIST */
+    div.songs_list{
         flex-wrap: wrap;
     }
-    
     /* SONG LIST- SONG CONTAINER  */
     div.song_container{
         /* Landscape phones:Two containers per row 
@@ -253,7 +282,12 @@ div.song_subtitle{
 /* X-Small devices */
 @media (max-width: 576px) { 
     
-    #recently_played_songs{
+    /* #recently_played_songs{
+        flex-wrap: wrap;
+    } */
+
+    /* HOMEPAGE- SONGS LIST */
+    div.songs_list{
         flex-wrap: wrap;
     }
     
@@ -261,7 +295,7 @@ div.song_subtitle{
     div.song_container{
         /* X-small devices:Two containers per row 
         (Takin the padding into account) */
-        width: calc(100% - 15px);
+        width: calc(100%/2 - 15px);
     }
 
     /* Line */
@@ -307,8 +341,8 @@ div.song_subtitle{
         display: none;
     }
 
-    /* SONGS LIST */
-    #songs_list{
+    /* HOMEPAGE */
+    #homepage{
         /* Layout Structure */
         width: calc(100% - 50px);
         /* Other Settings */
