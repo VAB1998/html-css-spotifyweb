@@ -5,9 +5,20 @@
     padding: 0;
 }
 
+main{
+    height: calc(100vh - 178px);
+    background-color: cornflowerblue;
+}
+.bottom_bar{
+    height: 100px;
+    background-color: darkkhaki;
+}
+
+
 body{
     font-family: 'Roboto', sans-serif;
 }
+
 /* ------Repeated Parts of Code------ */
 /* BUTTONS */
 /* Often repeated settings */
@@ -18,6 +29,7 @@ button{
 
 /* ANCHORS */
 a{
+    display: block;
     text-decoration: none;
     color: grey;
 }
@@ -44,23 +56,24 @@ a{
     border-bottom: 1px solid gray;
 }
 /* ------------------- */
+ul.navigation_bar a{
+    padding: 8px 0;
+} 
 
 
 
 /* SIDE BAR- NAVIGATION BAR>LI */
-.navigation_bar li{
-    padding: 10px 0 10px 10px;
-} 
+
 
 /* SIDE BAR- PLAYLIST */
 div.playlist{
-    padding-left: 10px;
+    /* padding-left: 10px; */
     overflow-y: auto;
     height: 100%;
 }
 
 /* SIDE BAR- PLAYLIST LIST */
-ul.playlist_list li{
+ul.playlist_list a{
     padding: 6px 0;
 }
 
@@ -68,11 +81,6 @@ ul.playlist_list li{
 div.playlist>h4{
     color: white;  
     margin: 6px 0;  
-}
-
-/* SIDE BAR- SMALL SIDE BAR */
-ul.small_side_bar li{
-    padding: 5px 10px;
 }
 
 /* TOP BAR- TOP BAR BUTTON */
@@ -86,26 +94,26 @@ button.top_bar_button{
     border: 1px solid white;
 }
 
+#side_bar .icon{
+    padding-right: 5px;
+    vertical-align: middle;  
+}
+
 /* SIDE BAR- NAVIGATION> ICON */
 ul.navigation_bar .icon{
     /* Style Settings */
-    font-size: 1.6em;
-    vertical-align: middle;
-    padding-right: 5px;
+    width: 20%;
 }
 
 /* SIDE BAR- PLAYLIST> ICON */
 a.create_playlist .icon{
     /* Style Settings */
     font-size: 2.5em;
-    vertical-align: middle;
-    padding-right: 5px;
 }
 
-/* SIDE BAR- SMALL SIDE BAR> ICON */
-ul.small_side_bar .icon{
-    vertical-align: middle;
-    padding-right: 5px;
+/* SIDE BAR- SMALL SIDE BAR */
+div.small_side_bar .icon{
+    width: 10%;
 }
 
 /* SIDE BAR */
@@ -113,16 +121,24 @@ ul.small_side_bar .icon{
     /* Style Settings */
     background-color: black;
     width: 200px;
-    height: 90vh;
+    height: calc(100vh - 100px);
+    padding: 10px;
     /* Flex Settings */
     flex-direction: column;
     justify-content: space-between;
+    /* Other Settings */
+    overflow-y: hidden;
 }
 
 /* SIDE BAR- LOGO */
 #logo{
     width: 70%;
     margin: 15px;
+}
+
+/* SIDE BAR- SMALL LOGO */
+#small_logo{
+    display: none;
 }
 
 /* TOP BAR */
@@ -135,6 +151,74 @@ ul.small_side_bar .icon{
 }
 
 
+
+
+/* Media Queries */
+/* X-Small devices */
+@media (max-width: 576px) { 
+    /* ANCHOR */
+    a{
+        text-align: center;
+    }
+    /* Line */
+    .line{
+        display: none;
+    }
+    
+
+    /* SIDE BAR- NAVIGATION BAR> SPAN */
+    ul.navigation_bar span,
+    div.small_side_bar span{
+        display: none;
+    }
+
+    /* SIDE BAR- NAVIGATION> ICON */
+    ul.navigation_bar .icon{
+        /* Style Settings */
+        width: 100%;
+    }
+
+    /* SIDE BAR- SMALL SIDE BAR */
+    div.small_side_bar .icon{
+        width: 80%;
+    }
+    
+    /* SIDE BAR- PLAYLIST */
+    div.playlist{
+        display: none;
+    }
+    
+    /* SIDE BAR */
+    #side_bar{
+        width: 40px;
+        padding: 10px 3px;
+    }
+
+    /* SIDE BAR -LOGO */
+    #logo{
+        display: none;
+    }
+
+    #small_logo{
+        display: inline;
+    }
+    
+    #side_bar .icon{
+        padding-right: 0;
+    }
+
+    
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+/* @media (min-width: 576px) { ... } */
+
+/* Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px) { ... } */
+
+/* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) { ... } */
 
 
 

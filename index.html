@@ -20,30 +20,29 @@
     <div class="container clearfix">
         <!-- SIDE BAR -->
         <header id="side_bar" class="flex_container float_left">
-            
-            
                 <!-- LOGO -->
                 <img id="logo" src="img/logo.svg" alt="Spotify Logo">
                 <!-- NAVIGATION BAR -->
                 <ul class="navigation_bar">
+                    <img id="small_logo" src="img/logo-small.svg" alt="Spotify small logo">
                     <li>
                         <a href="#">
-                            <i class="icon fas fa-home"></i>
-                            Home
+                            <img class="icon" src="img/home.svg" alt="">
+                            <span>Home</span>       
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <span class="icon"><i class="fas fa-home"></i></span>
-                            <span>Home</span>
+                            <img class="icon" src="img/search.svg" alt="">
+                            <span>Home</span>       
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <span class="icon"><i class="fas fa-home"></i></span>
-                            <span>Home</span>
+                            <img class="icon" src="img/libreria.svg" alt="">
+                            <span>Home</span>       
                         </a>
-                    </li>
+                    </li> 
                 </ul>
                 <!-- PLAYLIST -->
                 <div class="playlist">
@@ -64,24 +63,26 @@
                 </div>
             
                 <!-- SMALL SIDE BAR -->
-            <ul class="small_side_bar">
+            <div class="small_side_bar">
                 <li>
                     <a href="#">
-                        <i class="icon far fa-arrow-alt-circle-down"></i>
-                        Installa app
+                        <img class="icon" src="img/download.svg" alt="">
+
+                        <!-- <i class="icon far fa-arrow-alt-circle-down"></i> -->
+                        <span>Installa app</span>               
                     </a>
-                   
                 </li>
-                <li>
-                    <div class="line"></div>
-                </li>
-                <li>
+            
+                <div class="line"></div> 
+                <div>
                     <a href="#">
-                        <i class="icon fas fa-user"></i>
-                        John Doe
+                        <img class="icon" src="img/profile.svg" alt="">
+
+                        <!-- <i class="icon fas fa-user"></i> -->
+                        <span>John Doe</span>
                     </a>
-                </li>
-            </ul>
+                </div>
+            </div>
         </header>
 
         <!-- TOP BAR -->
@@ -90,6 +91,9 @@
             <button class="top_bar_button">EFFETTUA L'UPGRADE</button>
         </div>
 
+        <main></main>
+
+        <div class="bottom_bar"></div>
    
     </div>
 </body>
