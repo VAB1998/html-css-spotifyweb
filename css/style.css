@@ -158,8 +158,28 @@ button.top_bar_button{
 }
 
 
+/* SONG LIST- SONG CONTAINER  */
+.song_container{
+    width: 160px;
+    margin-right: 15px;
+    /* Other Settings */
+    text-align: center;
+}
+
+
+/* SONG LIST- SONG IMAGE */
+img.song_image{
+    width: 100%;
+}
 
 /* Media Queries */
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 992px) {  
+    #recently_played_songs{
+        flex-wrap: wrap;
+    }
+}
 /* X-Small devices */
 @media (max-width: 576px) { 
     
