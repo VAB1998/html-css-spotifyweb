@@ -5,14 +5,29 @@
     padding: 0;
 }
 
+/* General Settings for: */
 li{
     list-style-type: none; /* Remove bullets */
 }
 
 a{
     text-decoration: none;
+    color: grey;
+    display: block;
 }
 
+h2{
+    color: white;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+}
+
+/* ------------------- */
+
+/* Often Repeated Classes */
 /* Float Left */
 .float_left{
     float: left;
@@ -35,34 +50,72 @@ a{
     display: flex;
 }
 
+/* ----------- */
+
 /* Line */
-.line{
+div.line{
     border-bottom: 1px solid gray;
+    margin: 5px 0;
 }
 
+/* TOP BAR- TOP BAR BUTTON */
 button.top_bar_button{
     /* Style Settings */
     color: white;
     background-color: #393939;
+    /* Box Settings */
     padding: 10px 20px;
     margin-right: 10px;
     border-radius: 20px;
     border: 1px solid white;
 }
 
+/* SONG LIST- SONG CONTAINER  */
+div.song_container{
+    /* Box Settings */
+    width: calc(100%/6 - 15px); /* Basic condition:Six containers per row (Takin the padding into account) */
+    margin-right: 15px;
+    /* Other Settings */
+    text-align: center;
+}
+
+/* SONG LIST- SONG IMAGE */
+img.song_image{
+    width: 100%;
+}
+
+/* SONG LIST- SONG TITLE */
+div.song_title{
+    /* Style */
+    font-weight: bold;
+    color: white;
+    /* Box Settings */
+    margin-bottom: 8px;
+}
+
+/* SONG LIST- SONG TITLE */
+div.song_subtitle{
+    /* Style */
+    color: grey;
+    font-size: .8em;
+    /* Box Settings */
+    margin-bottom: 8px;
+}
 
 #top_bar{
     /* Layout Structure */
     width: calc(100% - 180px);
     height: 80px;
-    background-color: #121120;
+    background-color: #06060a;
     /* Other Settings */
     text-align: right;
     padding: 21px 10px; 
-
 }
 
+/* SIDE BAR */
 #side_bar{
+    /* Style */
+    color: white;
     /* Layout Structure */
     width: 180px;
     height: calc(100vh - 80px);
@@ -72,49 +125,42 @@ button.top_bar_button{
     justify-content: space-between;
 }
 
-#songs_list{
-    /* Layout Structure */
-    width: calc(100% - 180px);
-    height: calc(100vh - 160px);
-    padding: 0 20px;
-    background-color: #252255;
-}
-
-#tool_bar{
-    /* Layout Structure */
-    width: 100%;
-    height: 80px;
-    background-color: #3c3f51;
-}
-
-/* SPOTIFY LOGOS */
+/* SIDE BAR- SPOTIFY LOGO */
 #spotify_logo{
     width: 70%;
     margin: 10px 0 10px 10px;
 }
 
+/* SIDE BAR- SPOTIFY SMALL LOGO */
 #spotify_small_logo{
     display: none;
 }
 
-/* PLAYLIST */
+/* SIDE BAR- PLAYLIST */
 #playlist{
     /* Box Settings */
-    margin-left: 10px;
+    margin: 20px 10px;
     height: 100%;
     /* Other Settings */
     overflow-y: auto;
 }
 
-/* BOTTOM SIDE BAR */
+/* SIDE BAR- BOTTOM SIDE BAR */
 #bottom_side_bar{
-    margin: 0 10px;
+    margin: 10px;
 }
 
-/* SIDE BAR- All the Anchors */
-#navigation_bar a{
-    display: block;
-    margin-left: 10px;
+/* SONGS LIST */
+#songs_list{
+    /* Layout Structure */
+    width: calc(100% - 180px);
+    height: calc(100vh - 160px);
+    /* Box Settings */
+    padding: 0 20px;
+    /* Style */
+    background-color: #0f0e18;
+    /* Other Settings */
+    overflow-y: auto;
 }
 
 /* SONGS LIST- SONGS BAR */
@@ -124,21 +170,35 @@ button.top_bar_button{
     flex-wrap: wrap;
 }
 
-/* SONGS LIST- SONGS BAR> A */
-#songs_bar a{
-    display: block;
-    /* Box Settings */
-    padding: 10px 0;
-    margin: 10px;
+/* SONGS LIST- RECENTLY PLAYED SONGS */
+#recently_played_songs{
+    margin-bottom: 40px;
 }
 
+/* TOOLBAR */
+#tool_bar{
+    /* Layout Structure */
+    width: 100%;
+    height: 80px;
+    background-color: #3c3f51;
+}
 
-
-/* PLAYLIST> LI */
+/* SIDE BAR- PLAYLIST> LI */
 #playlist li{
-    margin: 6px 0;
+    margin: 8px 0;
+}
+/* SIDE BAR- Anchors */
+#navigation_bar a{
+    margin-left: 10px;
 }
 
+/* SIDE BAR- NAVIGATION BAR> ICONS */
+#navigation_bar .icon{
+    /* Box Settings */
+    width: 15%;
+    /* Other Settings */
+    vertical-align: middle;
+}
 
 /* SIDE BAR- BOTTOM SIDE BAR> ICONS */
 #bottom_side_bar .icon{
@@ -148,29 +208,15 @@ button.top_bar_button{
     vertical-align: middle;
 }
 
-/* SIDE BAR- NAVIGATION BAR> ICONS */
-#navigation_bar .icon{
+/* SONGS LIST- SONGS BAR> A */
+#songs_bar a{
     /* Box Settings */
-    width: 20%;
-    /* Other Settings */
-    vertical-align: middle;
-}
-
-
-/* SONG LIST- SONG CONTAINER  */
-.song_container{
-    width: calc(100%/6 - 15px);
-    margin-right: 15px;
-    /* Other Settings */
-    text-align: center;
+    padding: 10px 0;
+    margin: 10px;
 }
 
 
 
-/* SONG LIST- SONG IMAGE */
-img.song_image{
-    width: 100%;
-}
 
 
 /* Media Queries */
@@ -180,12 +226,12 @@ img.song_image{
         flex-wrap: wrap;
     }
 
-    .song_container{
+    /* SONG LIST- SONG CONTAINER  */
+    div.song_container{
+        /* Tablets:Four containers per row 
+        (Takin the padding into account) */
         width: calc(100%/4 - 15px);
-
     }
-
-    
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -194,14 +240,15 @@ img.song_image{
     #recently_played_songs{
         flex-wrap: wrap;
     }
-    .song_container{
+    
+    /* SONG LIST- SONG CONTAINER  */
+    div.song_container{
+        /* Landscape phones:Two containers per row 
+        (Takin the padding into account) */
         width: calc(100%/2 - 15px);
-
     }
 
 }
-
-
 
 /* X-Small devices */
 @media (max-width: 576px) { 
@@ -209,24 +256,25 @@ img.song_image{
     #recently_played_songs{
         flex-wrap: wrap;
     }
-
-    .song_container{
+    
+    /* SONG LIST- SONG CONTAINER  */
+    div.song_container{
+        /* X-small devices:Two containers per row 
+        (Takin the padding into account) */
         width: calc(100% - 15px);
-
     }
-
 
     /* Line */
-    .line{
+    div.line{
         display: none;
     }
-
 
     /* Link Text */
     span.link_text{
         display: none;
     }
 
+    /* TOP BAR */
     #top_bar{
         /* Layout Structure */
         width: calc(100% - 50px);
@@ -234,16 +282,18 @@ img.song_image{
     
     /* SIDE BAR */
     #side_bar{
+        /* Box Settings */
         width: 50px;
+        /* Other Settings */
         text-align: center;
     }
     
-    
-    /* SPOTIFY LOGOS */
+    /* SIDE BAR SPOTIFY LOGO */
     #spotify_logo{
         display: none;
     }
 
+    /* SIDE BAR- SPOTIFY SMALL LOGO */
     #spotify_small_logo{
         /* Box Settings */
         width: 90%;
@@ -252,7 +302,7 @@ img.song_image{
         display: inline;
     }
 
-    /* PLAYLIST */
+    /* SIDE BAR- PLAYLIST */
     #playlist{
         display: none;
     }
@@ -261,6 +311,7 @@ img.song_image{
     #songs_list{
         /* Layout Structure */
         width: calc(100% - 50px);
+        /* Other Settings */
         overflow-y: auto;
     }
     
@@ -270,7 +321,6 @@ img.song_image{
         margin-left: 0;
     }
 
-    
     /* SIDE BAR- NAVIGATION BAR> ICONS */
     #navigation_bar .icon{
         /* Box Settings */
@@ -283,6 +333,7 @@ img.song_image{
     #bottom_side_bar .icon{
         /* Box Settings */
         width: 90%;
+        margin: 5px 0;
         /* Other Settings */
         vertical-align: middle;
     } 
