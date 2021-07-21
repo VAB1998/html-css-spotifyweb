@@ -14,46 +14,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Spotify</title>
+    <title>Spotify 2</title>
 </head>
-<body class="clearfix">
-    <div class="container clearfix">
-        <!-- SIDE BAR -->
-        <header id="side_bar" class="flex_container float_left">
-                <!-- LOGO -->
-                <img id="logo" src="img/logo.svg" alt="Spotify Logo">
+
+<body>
+    <div class="container">
+        <section id="top_bar" class="float_right">
+            <!-- TOP BAR BUTTON -->
+            <button class="top_bar_button">EFFETTUA L'UPGRADE</button>
+        </section>
+
+        <main class="clearfix">
+
+            <!-- SIDE BAR -->
+            <section id="side_bar" class="flex_container float_left">
+               
+                <!-- SPOTIFY LOGOS -->
+                <img id="spotify_logo" src="img/logo.svg" alt="Spotify Logo">
+                
                 <!-- NAVIGATION BAR -->
-                <ul class="navigation_bar">
-                    <img id="small_logo" src="img/logo-small.svg" alt="Spotify small logo">
-                    <li>
-                        <a href="#">
-                            <img class="icon" src="img/home.svg" alt="">
-                            <span>Home</span>       
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="icon" src="img/search.svg" alt="">
-                            <span>Home</span>       
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="icon" src="img/libreria.svg" alt="">
-                            <span>Home</span>       
-                        </a>
-                    </li> 
-                </ul>
+                <div id="navigation_bar">
+                    <img id="spotify_small_logo" src="img/logo-small.svg" alt="Spotify Small Logo">
+                    <ul >
+                        <li><a href="#"><img class="icon" src="img/home.svg" alt=""><span class="link_text">Home</span></a></li>
+                        <li><a href="#"><img class="icon" src="img/home.svg" alt=""><span class="link_text">Home</span></a></li>
+                        <li><a href="#"><img class="icon" src="img/home.svg" alt=""><span class="link_text">Home</span></a></li>
+      
+                    </ul>
+                </div>
+                
                 <!-- PLAYLIST -->
-                <div class="playlist">
+                <div id="playlist">
                     <h4>PLAYLIST</h4>
-                    
-                    <a class="create_playlist" href="#">
-                        <i class="icon fas fa-plus-square"></i>
-                        Crea Playlist
-                    </a>
-                    
-                    <ul class="playlist_list">
+                    <ul>
+                        <li><a href="#"><i class="fas fa-plus-square"></i> Crea Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
                         <li><a href="#">Nome Playlist</a></li>
                         <li><a href="#">Nome Playlist</a></li>
                         <li><a href="#">Nome Playlist</a></li>
@@ -61,40 +56,29 @@
                         <li><a href="#">Nome Playlist</a></li>
                     </ul>
                 </div>
-            
-                <!-- SMALL SIDE BAR -->
-            <div class="small_side_bar">
-                <li>
-                    <a href="#">
-                        <img class="icon" src="img/download.svg" alt="">
 
-                        <!-- <i class="icon far fa-arrow-alt-circle-down"></i> -->
-                        <span>Installa app</span>               
-                    </a>
-                </li>
-            
-                <div class="line"></div> 
-                <div>
-                    <a href="#">
-                        <img class="icon" src="img/profile.svg" alt="">
-
-                        <!-- <i class="icon fas fa-user"></i> -->
-                        <span>John Doe</span>
-                    </a>
+                <!-- BOTTOM SIDE BAR -->
+                <div id="bottom_side_bar">
+                    <a href="#"><img  class="icon" src="img/download.svg" alt=""><span class="link_text">Installa App</span></a>
+                    <div class="line"></div> 
+                    <a href="#"><img  class="icon" src="img/profile.svg" alt=""><span class="link_text">Installa App</span></a>
                 </div>
-            </div>
-        </header>
-
-        <!-- TOP BAR -->
-        <div id="top_bar">
-            <!-- TOP BAR BUTTON -->
-            <button class="top_bar_button">EFFETTUA L'UPGRADE</button>
-        </div>
-
-        <main></main>
-
-        <div class="bottom_bar"></div>
-   
+            </section>
+            <!-- SONGS LIST -->
+            <section id="songs_list" class="float_left">
+                <!-- SONGS BAR -->
+                <div id="songs_bar" class="flex_container">
+                    <li><a href="#">IN EVIDENZA</a></li>
+                    <li><a href="#">IN EVIDENZA</a></li>
+                    <li><a href="#">IN EVIDENZA</a></li>
+                    <li><a href="#">IN EVIDENZA</a></li>
+                    <li><a href="#">IN EVIDENZA</a></li>
+                    <li><a href="#">IN EVIDENZA</a></li>
+                </div>
+                <h2>Recently played</h2>
+            </section>
+            <section id="tool_bar" class="float_left"></section>
+        </main>
     </div>
 </body>
 </html>

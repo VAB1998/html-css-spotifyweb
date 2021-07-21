@@ -5,48 +5,32 @@
     padding: 0;
 }
 
-main{
-    height: calc(100vh - 178px);
-    background-color: cornflowerblue;
-}
-.bottom_bar{
-    height: 100px;
-    background-color: darkkhaki;
+li{
+    list-style-type: none; /* Remove bullets */
 }
 
-
-body{
-    font-family: 'Roboto', sans-serif;
-}
-
-/* ------Repeated Parts of Code------ */
-/* BUTTONS */
-/* Often repeated settings */
-button{
-    border: none;
-    cursor: pointer;
-}
-
-/* ANCHORS */
 a{
-    display: block;
     text-decoration: none;
-    color: grey;
 }
 
-/* CLEARFIX */
+/* Float Left */
+.float_left{
+    float: left;
+}
+
+/* Float Right */
+.float_right{
+    float: right;
+}
+
+/* Clearfix */
 .clearfix::after{
     content: "";
     display: table;
     clear: both;
 }
 
-/* Float */
-.float_left{
-    float: left;
-}
-
-/* Flex */
+/* Flex Container */
 .flex_container{
     display: flex;
 }
@@ -55,35 +39,7 @@ a{
 .line{
     border-bottom: 1px solid gray;
 }
-/* ------------------- */
-ul.navigation_bar a{
-    padding: 8px 0;
-} 
 
-
-
-/* SIDE BAR- NAVIGATION BAR>LI */
-
-
-/* SIDE BAR- PLAYLIST */
-div.playlist{
-    /* padding-left: 10px; */
-    overflow-y: auto;
-    height: 100%;
-}
-
-/* SIDE BAR- PLAYLIST LIST */
-ul.playlist_list a{
-    padding: 6px 0;
-}
-
-/* SIDE BAR- PLAYLIST> H4 */
-div.playlist>h4{
-    color: white;  
-    margin: 6px 0;  
-}
-
-/* TOP BAR- TOP BAR BUTTON */
 button.top_bar_button{
     /* Style Settings */
     color: white;
@@ -94,120 +50,178 @@ button.top_bar_button{
     border: 1px solid white;
 }
 
-#side_bar .icon{
-    padding-right: 5px;
-    vertical-align: middle;  
+
+#top_bar{
+    /* Layout Structure */
+    width: calc(100% - 180px);
+    height: 80px;
+    background-color: burlywood;
+    /* Other Settings */
+    text-align: right;
+    padding: 21px 10px; 
+
 }
 
-/* SIDE BAR- NAVIGATION> ICON */
-ul.navigation_bar .icon{
-    /* Style Settings */
-    width: 20%;
-}
-
-/* SIDE BAR- PLAYLIST> ICON */
-a.create_playlist .icon{
-    /* Style Settings */
-    font-size: 2.5em;
-}
-
-/* SIDE BAR- SMALL SIDE BAR */
-div.small_side_bar .icon{
-    width: 10%;
-}
-
-/* SIDE BAR */
 #side_bar{
-    /* Style Settings */
-    background-color: black;
-    width: 200px;
-    height: calc(100vh - 100px);
-    padding: 10px;
+    /* Layout Structure */
+    width: 180px;
+    height: calc(100vh - 80px);
+    background-color: aqua;
     /* Flex Settings */
     flex-direction: column;
     justify-content: space-between;
-    /* Other Settings */
-    overflow-y: hidden;
 }
 
-/* SIDE BAR- LOGO */
-#logo{
+#songs_list{
+    /* Layout Structure */
+    width: calc(100% - 180px);
+    height: calc(100vh - 160px);
+    padding: 0 20px;
+    background-color: teal;
+}
+
+#tool_bar{
+    /* Layout Structure */
+    width: 100%;
+    height: 80px;
+    background-color: turquoise;
+}
+
+/* SPOTIFY LOGOS */
+#spotify_logo{
     width: 70%;
-    margin: 15px;
+    margin: 10px 0 10px 10px;
 }
 
-/* SIDE BAR- SMALL LOGO */
-#small_logo{
+#spotify_small_logo{
     display: none;
 }
 
-/* TOP BAR */
-#top_bar{
-    /* Style Settings */
-    background-color: #393939;
-    padding: 20px 0;
-    /* Position Settings */
-    text-align: right;
+/* PLAYLIST */
+#playlist{
+    /* Box Settings */
+    margin-left: 10px;
+    height: 100%;
+    /* Other Settings */
+    overflow-y: auto;
 }
 
+/* BOTTOM SIDE BAR */
+#bottom_side_bar{
+    margin: 0 10px;
+}
+
+/* SIDE BAR- All the Anchors */
+#navigation_bar a{
+    display: block;
+    margin-left: 10px;
+}
+
+/* SONGS LIST- SONGS BAR */
+#songs_bar{
+    background-color: silver;
+    /* Flex Settings */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* SONGS LIST- SONGS BAR> A */
+#songs_bar a{
+    display: block;
+    /* Box Settings */
+    padding: 10px 0;
+    margin: 10px;
+}
+
+
+
+/* PLAYLIST> LI */
+#playlist li{
+    margin: 6px 0;
+}
+
+
+/* SIDE BAR- BOTTOM SIDE BAR> ICONS */
+#bottom_side_bar .icon{
+    /* Box Settings */
+    width: 10%;
+    /* Other Settings */
+    vertical-align: middle;
+}
+
+/* SIDE BAR- NAVIGATION BAR> ICONS */
+#navigation_bar .icon{
+    /* Box Settings */
+    width: 20%;
+    /* Other Settings */
+    vertical-align: middle;
+}
 
 
 
 /* Media Queries */
 /* X-Small devices */
 @media (max-width: 576px) { 
-    /* ANCHOR */
-    a{
-        text-align: center;
-    }
+    
     /* Line */
     .line{
         display: none;
     }
-    
 
-    /* SIDE BAR- NAVIGATION BAR> SPAN */
-    ul.navigation_bar span,
-    div.small_side_bar span{
-        display: none;
-    }
 
-    /* SIDE BAR- NAVIGATION> ICON */
-    ul.navigation_bar .icon{
-        /* Style Settings */
-        width: 100%;
-    }
-
-    /* SIDE BAR- SMALL SIDE BAR */
-    div.small_side_bar .icon{
-        width: 80%;
-    }
-    
-    /* SIDE BAR- PLAYLIST */
-    div.playlist{
+    /* Link Text */
+    span.link_text{
         display: none;
     }
     
     /* SIDE BAR */
     #side_bar{
-        width: 40px;
-        padding: 10px 3px;
+        width: 50px;
+        
     }
-
-    /* SIDE BAR -LOGO */
-    #logo{
+    
+    
+    /* SPOTIFY LOGOS */
+    #spotify_logo{
         display: none;
     }
 
-    #small_logo{
+    #spotify_small_logo{
+        /* Box Settings */
+        width: 90%;
+        margin: 5px auto;
+        /* Other Settings */
         display: inline;
     }
-    
-    #side_bar .icon{
-        padding-right: 0;
+
+    /* PLAYLIST */
+    #playlist{
+        display: none;
     }
 
     
+    /* SIDE BAR- All the Anchors */
+    #navigation_bar a{
+        display: inline;
+        margin-left: 0;
+    }
+
+    
+    /* SIDE BAR- NAVIGATION BAR> ICONS */
+    #navigation_bar .icon{
+        /* Box Settings */
+        width: 90%;
+        /* Other Settings */
+        vertical-align: middle;
+    }
+
+    /* SIDE BAR- BOTTOM SIDE BAR> ICONS */
+    #bottom_side_bar .icon{
+        /* Box Settings */
+        width: 90%;
+        /* Other Settings */
+        vertical-align: middle;
+    } 
 }
 
 
@@ -219,8 +233,6 @@ div.small_side_bar .icon{
 
 /* Large devices (desktops, 992px and up) */
 /* @media (min-width: 992px) { ... } */
-
-
 
 
 
