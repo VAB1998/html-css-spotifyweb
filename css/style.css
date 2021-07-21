@@ -86,11 +86,38 @@ div.song_container{
     margin-right: 15px;
     /* Other Settings */
     text-align: center;
+    cursor: pointer;
 }
 
 /* SONG LIST- SONG IMAGE */
 img.song_image{
     width: 100%;
+}
+
+/* HOMEPAGE- ARTIST IMAGE */
+img.artist_image{
+    /* Box Style */
+    border-radius: 50%;
+    width: 100%;
+}
+
+/* HOMEPAGE- SONG IMAGE WRAPPER */
+div.song_image_wrapper{
+    position: relative;
+}
+
+/* HOMEPAGE- PLAY SONG ICON */
+i.play_song_icon{
+    /* Absolute Centering */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Style */
+    color: white;
+    font-size: 2em;
+    /* Other Settings */
+    z-index: -1;
 }
 
 /* SONG LIST- SONG TITLE */
@@ -187,6 +214,7 @@ div.song_subtitle{
 /* HOMEPAGE- SONGS LIST */
 div.songs_list{
     margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 /* TOOLBAR */
@@ -231,13 +259,34 @@ div.songs_list{
 
 
 /* ---------------------- */
-/* HOMEPAGE- POPULAR ARTISTS> SONG IMAGE */
-#popular_artists .song_image{
-    /* Box Style */
-    border-radius: 50%;
+
+
+
+/* HOMEPAGE- SONG CONTAINER */
+/* Hover effect */
+div.song_container:hover i.play_song_icon{
+    z-index: 2;
+}
+
+/* HOMEPAGE- SONG CONTAINER */
+/* Hover Effect */
+div.song_container:hover img.song_image{
+    filter:opacity(65%);
 }
 
 
+/* Hover Effect */
+/* All the ANCHORS become white */
+#homepage_bar a:hover,
+#navigation_bar a:hover,
+#playlist a:hover,
+#bottom_side_bar a:hover{
+    color: white;
+}
+
+button.top_bar_button:hover{
+    transform: scale(1.2);
+}
 
 
 
