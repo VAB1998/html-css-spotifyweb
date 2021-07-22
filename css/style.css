@@ -117,7 +117,7 @@ i.play_song_icon{
     transform: translate(-50%, -50%);
     /* Style */
     color: white;
-    font-size: 2em;
+    font-size: 3em;
     /* Other Settings */
     z-index: -1;
 }
@@ -286,6 +286,7 @@ div.scrubber{
     background-color: white;
     /* Other Settings */
     transform: scale(2);
+    display: none; /* For the Hover effect */
 }
 
 /* SONG TOOL BAR- VOLUME BAR CONTAINER */
@@ -408,8 +409,42 @@ button.top_bar_button:hover{
     transform: scale(1.2);
 }
 
+/* SONG TOOL BAR- PLAYED SONG SUBTITLE */
+/* Hover Effect */
+p.played_song_subtitle:hover{
+    text-decoration: underline;
+    color: white;
+}
 
-/* ----------END HOVER EFFECT---------- */
+/* SONG TOOL BAR- FAVORITE and FOLDER SONG ICON */
+/* Hover Effect */
+i.favorite_song_icon:hover,
+i.folder_song_icon:hover{
+    color: white;
+}
+
+/* SONG TOOL BAR- CENTER CONTROLS ICONS WRAPPER> */
+/* Hover Effect */
+div.center_controls_icons_wrapper i.fa-play-circle:hover{
+    transform: scale(1.2);
+}
+
+/* SONG TOOL BAR- PROGRESS BAR CONTAINER and VOLUME BAR CONTAINER */
+/* Hover Effect */
+div.progress_bar_container:hover div.progress_bar,
+div.volume_bar_container:hover div.volume_bar{   
+    background-color: #72bb40; 
+}
+
+/* SONG TOOL BAR- PROGRESS BAR CONTAINER */
+/* Hover Effect */
+div.progress_bar_container:hover div.scrubber,
+div.volume_bar_container:hover div.scrubber{
+    display: block;
+}
+
+
+/* ----------END HOVER EFFECTS---------- */
 
 /* SONG TOOL BAR- CENTER CONTROLS ICONS WRAPPER> */
 div.center_controls_icons_wrapper i.fa-play-circle{
