@@ -16,9 +16,7 @@ a{
     display: block;
 }
 
-body{
-    min-width: 576px;
-}
+
 
 button{
     cursor: pointer;
@@ -211,14 +209,98 @@ div.song_subtitle{
     flex-wrap: wrap;
 }
 
-/* SONGS LIST- RECENTLY PLAYED SONGS */
-/* #recently_played_songs{
-    margin-bottom: 40px;
-} */
 /* HOMEPAGE- SONGS LIST */
 div.songs_list{
     margin-bottom: 40px;
     flex-wrap: wrap;
+}
+
+/* SONG TOOL BAR- PLAYED SONG IMAGE */
+img.played_song_image{
+    width: 30%;
+}
+
+/* SONG TOOL BAR- PLAYED SONG INFO */
+div.played_song_info{
+    width: 40%;
+}
+
+/* SONG TOOL BAR- PLAYED SONG TITLE */
+p.played_song_title{
+    font-weight: bold;
+    color: white;
+}
+
+/* SONG TOOL BAR- PLAYED SONG SUBTITLE */
+p.played_song_subtitle{
+    font-size: .8em;
+    color: gray;
+}
+
+/* SONG TOOL BAR- FAVORITE and FOLDER SONG ICON */
+i.favorite_song_icon,
+i.folder_song_icon{
+    color: gray;
+}
+
+/* SONG TOOL BAR- CENTER CONTROLS ICONS WRAPPER */
+div.center_controls_icons_wrapper{
+    /* Box Settings */
+    width: 180px;
+    /* Flex Settings */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* SONG TOOL BAR- PROGRESS SONG */
+div.progress_song{
+    width: 100%;
+    height: 20px;
+    /* Flex Settings */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* SONG TOOL BAR- PROGRESS BAR CONTAINER */
+div.progress_bar_container{
+    width: 80%;
+    background-color: #a9a9a9ba; 
+}
+
+/* SONG TOOL BAR- VOLUME BAR CONTAINER */
+div.progress_bar{
+    /* Box Settings */
+    width: 50%;
+    height: 5px;
+    /* Style */
+    background-color: grey;
+}
+
+/* SONG TOOL BAR- SCRUBBER */
+div.scrubber{
+    /* Box Settings */
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    /* Style Settings */
+    background-color: white;
+    /* Other Settings */
+    transform: scale(2);
+}
+
+/* SONG TOOL BAR- VOLUME BAR CONTAINER */
+div.volume_bar_container{
+    width: 50%;
+    background-color: #a9a9a9ba;
+}
+
+/* SONG TOOL BAR- VOLUME BAR CONTAINER */
+div.volume_bar{
+    /* Box Settings */
+    width: 50%;
+    height: 5px;
+    /* Style */
+    background-color: grey;
 }
 
 /* TOOLBAR */
@@ -230,6 +312,39 @@ div.songs_list{
     /* Flex Settings */
     justify-content: space-between;
     align-items: center;
+}
+
+/* SONG TOOL BAR- PLAYED SONG */
+#played_song{
+    /* Flex Settings */
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 0 0 190px;
+}
+
+/* SONG TOOL BAR- CENTER CONTROLS */
+#center_controls{
+    /* Style */
+    color: white;
+    /* Box Settings */
+    width: 50%;
+    height: 60px;
+    /* Flex Settings */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* SONG TOOL BAR- RIGHT CONTROLS */
+#right_controls{
+    /* Style */
+    color: white;
+    /* Box Settings */
+    width: 190px;
+    /* Flex Settings */
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 0 0 190px;
 }
 
 /* SIDE BAR- PLAYLIST> LI */
@@ -264,6 +379,7 @@ div.songs_list{
     vertical-align: middle;
 }
 
+/* -----------HOVER EFFECTS--------- */
 /* HOMEPAGE- SONG CONTAINER */
 /* Hover effect */
 div.song_container:hover i.play_song_icon{
@@ -292,121 +408,20 @@ button.top_bar_button:hover{
     transform: scale(1.2);
 }
 
+
+/* ----------END HOVER EFFECT---------- */
+
+/* SONG TOOL BAR- CENTER CONTROLS ICONS WRAPPER> */
+div.center_controls_icons_wrapper i.fa-play-circle{
+    font-size: 1.8em;
+}
 /* ---------------------- */
 
-/* SONG TOOL BAR- PLAYED SONG */
-#played_song{
-    /* Box Settings */
-    /* width: 190px; */
-    /* height: 60px; */
-    /* Style */
-    background-color: chartreuse;
-    /* Flex Settings */
-    align-items: center;
-    justify-content: space-evenly;
-    flex: 0 0 190px;
-}
-
-/* SONG TOOL BAR- CENTER CONTROLS */
-#center_controls{
-    /* Box Settings */
-    width: 50%;
-    height: 60px;
-    /* Style */
-    background-color: cornflowerblue;
-    /* Flex Settings */
-   
-}
-
-/* SONG TOOL BAR- CENTER CONTROLS */
-#right_controls{
-    /* Box Settings */
-    width: 190px;
-    /* height: 60px; */
-    /* Style */
-    background-color: darkgoldenrod;
-    /* Flex Settings */
-    align-items: center;
-    justify-content: space-evenly;
-    flex: 0 0 190px;
-}
-
-/* SONG TOOL BAR- PLAYED SONG IMAGE */
-img.played_song_image{
-    width: 30%;
-}
-
-div.played_song_info{
-    width: 40%;
-}
 
 
-/* SONG TOOL BAR- VOLUME BAR CONTAINER */
-div.volume_bar_container{
-    width: 50%;
-    background-color: #a9a9a9ba;
-   
-}
-
-/* SONG TOOL BAR- VOLUME BAR CONTAINER */
-div.volume_bar{
-    /* Box Settings */
-    width: 50%;
-    height: 5px;
-    /* Style */
-    background-color: grey;
-    /* Other Settings */
-}
-
-/* SONG TOOL BAR- SCRUBBER */
-div.scrubber{
-    /* Box Settings */
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    /* Style Settings */
-    background-color: white;
-    /* Other Settings */
-    transform: scale(2);
-}
-
-#center_controls{
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-
-.progress_song{
-    width: 100%;
-    height: 20px;
-    background-color: aqua;
-    /* Flex Settings */
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-div.progress_bar_container{
-    width: 80%;
-    background-color: #a9a9a9ba;
-   
-}
-
-/* SONG TOOL BAR- VOLUME BAR CONTAINER */
-div.progress_bar{
-    /* Box Settings */
-    width: 50%;
-    height: 5px;
-    /* Style */
-    background-color: grey;
-    /* Other Settings */
-}
 /* Media Queries */
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 992px) {  
-    /* #recently_played_songs{
-        flex-wrap: wrap;
-    } */
     /* HOMEPAGE- SONGS LIST */
     div.songs_list{
         flex-wrap: wrap;
@@ -423,9 +438,6 @@ div.progress_bar{
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 768px) {
 
-    /* #recently_played_songs{
-        flex-wrap: wrap;
-    } */
     /* HOMEPAGE- SONGS LIST */
     div.songs_list{
         flex-wrap: wrap;
@@ -441,11 +453,6 @@ div.progress_bar{
 
 /* X-Small devices */
 @media (max-width: 576px) { 
-    
-    /* #recently_played_songs{
-        flex-wrap: wrap;
-    } */
-
     /* HOMEPAGE- SONGS LIST */
     div.songs_list{
         flex-wrap: wrap;
