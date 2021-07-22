@@ -16,6 +16,10 @@ a{
     display: block;
 }
 
+body{
+    min-width: 576px;
+}
+
 button{
     cursor: pointer;
     border: none;
@@ -218,11 +222,14 @@ div.songs_list{
 }
 
 /* TOOLBAR */
-#tool_bar{
+#song_tool_bar{
     /* Layout Structure */
     width: 100%;
     height: 80px;
     background-color: #3c3f51;
+    /* Flex Settings */
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* SIDE BAR- PLAYLIST> LI */
@@ -257,11 +264,6 @@ div.songs_list{
     vertical-align: middle;
 }
 
-
-/* ---------------------- */
-
-
-
 /* HOMEPAGE- SONG CONTAINER */
 /* Hover effect */
 div.song_container:hover i.play_song_icon{
@@ -284,12 +286,121 @@ div.song_container:hover img.song_image{
     color: white;
 }
 
+/* TOP BAR- TOP BAR BUTTON */
+/* Hover Effect */
 button.top_bar_button:hover{
     transform: scale(1.2);
 }
 
+/* ---------------------- */
+
+/* SONG TOOL BAR- PLAYED SONG */
+#played_song{
+    /* Box Settings */
+    /* width: 190px; */
+    /* height: 60px; */
+    /* Style */
+    background-color: chartreuse;
+    /* Flex Settings */
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 0 0 190px;
+}
+
+/* SONG TOOL BAR- CENTER CONTROLS */
+#center_controls{
+    /* Box Settings */
+    width: 50%;
+    height: 60px;
+    /* Style */
+    background-color: cornflowerblue;
+    /* Flex Settings */
+   
+}
+
+/* SONG TOOL BAR- CENTER CONTROLS */
+#right_controls{
+    /* Box Settings */
+    width: 190px;
+    /* height: 60px; */
+    /* Style */
+    background-color: darkgoldenrod;
+    /* Flex Settings */
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 0 0 190px;
+}
+
+/* SONG TOOL BAR- PLAYED SONG IMAGE */
+img.played_song_image{
+    width: 30%;
+}
+
+div.played_song_info{
+    width: 40%;
+}
 
 
+/* SONG TOOL BAR- VOLUME BAR CONTAINER */
+div.volume_bar_container{
+    width: 50%;
+    background-color: #a9a9a9ba;
+   
+}
+
+/* SONG TOOL BAR- VOLUME BAR CONTAINER */
+div.volume_bar{
+    /* Box Settings */
+    width: 50%;
+    height: 5px;
+    /* Style */
+    background-color: grey;
+    /* Other Settings */
+}
+
+/* SONG TOOL BAR- SCRUBBER */
+div.scrubber{
+    /* Box Settings */
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    /* Style Settings */
+    background-color: white;
+    /* Other Settings */
+    transform: scale(2);
+}
+
+#center_controls{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.progress_song{
+    width: 100%;
+    height: 20px;
+    background-color: aqua;
+    /* Flex Settings */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div.progress_bar_container{
+    width: 80%;
+    background-color: #a9a9a9ba;
+   
+}
+
+/* SONG TOOL BAR- VOLUME BAR CONTAINER */
+div.progress_bar{
+    /* Box Settings */
+    width: 50%;
+    height: 5px;
+    /* Style */
+    background-color: grey;
+    /* Other Settings */
+}
 /* Media Queries */
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 992px) {  
