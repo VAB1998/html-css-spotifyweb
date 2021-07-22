@@ -140,7 +140,7 @@ div.song_subtitle{
     /* Box Settings */
     margin-bottom: 8px;
 }
-
+/* TOP BAR */
 #top_bar{
     /* Layout Structure */
     width: calc(100% - 180px);
