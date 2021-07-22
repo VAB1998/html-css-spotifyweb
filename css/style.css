@@ -16,7 +16,9 @@ a{
     display: block;
 }
 
-
+body{
+    min-width: 576px;
+}
 
 button{
     cursor: pointer;
